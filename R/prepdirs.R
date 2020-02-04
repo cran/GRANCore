@@ -13,7 +13,7 @@
 #' @param tempLibLoc Location to create the temporary installed package library
 #'   for use during the testing process
 #' @param destination Base location (not including repository name) of the
-#'   final repository to be built
+#'   final repository to be built.
 #' @param logfile Comprehensive GRAN log file
 #' @param errlogfile Error log file
 #' @note This function is not intended for use by the end user.
@@ -61,7 +61,7 @@ prepDirStructure <- function(basedir, repo_name, temp_repo, temp_checkout,
         # If you're running an Apache HTTP server for your repo, this will
         # enable logs to be viewed as HTML
         if (!file.exists(file.path(dir, ".htaccess"))) {
-            cat("AddType text/html .log .md", file = file.path(dir, ".htaccess"))
+            cat("AddType text/html .log .md .out", file = file.path(dir, ".htaccess"))
         }
     }
 }
